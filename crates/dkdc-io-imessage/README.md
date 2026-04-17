@@ -33,17 +33,17 @@ That installs the `dkdc-io-imessage` binary on your `$PATH`.
 Edit `~/.config/dkdc-io/imessage/access.toml`:
 
 ```toml
-# Your own chat GUID. Lets an LLM `reply` with no chat_id to text you.
-# Copy it from the URL bar in Messages after selecting your "note to self"
-# chat, or look at `chat.guid` in chat.db.
-[self]
-chat_id  = "iMessage;-;+15551234567"
-handles  = ["+15551234567", "you@icloud.com"]
-
-# Other handles the LLM can interact with via DMs.
+# Other handles the LLM can interact with via DMs. Must appear BEFORE [self].
 allow_from = [
   "friend@example.com",
 ]
+
+# Your own chat GUID. Lets an LLM `reply` with no chat_id to text you.
+# Copy it from chat.db (`SELECT guid FROM chat WHERE style = 45`) or look at
+# the URL bar in Messages after selecting your "note to self" chat.
+[self]
+chat_id  = "iMessage;-;+15551234567"
+handles  = ["+15551234567", "you@icloud.com"]
 ```
 
 Verify with:
