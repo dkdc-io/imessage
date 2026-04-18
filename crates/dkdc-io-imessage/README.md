@@ -15,10 +15,15 @@ a pointer back to the config file.
 ## Install
 
 ```sh
+# no rust? one line:
+curl -LsSf https://dkdc.sh/imessage-plugin/install.sh | sh
+
+# already have cargo:
 cargo install dkdc-io-imessage
 ```
 
-That installs the `dkdc-io-imessage` binary on your `$PATH`.
+Either way you end up with the `dkdc-io-imessage` binary on your `$PATH`. The
+first script installs `rustup` if it isn't present, then runs `cargo install`.
 
 ## macOS prerequisites
 

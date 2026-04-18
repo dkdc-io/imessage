@@ -4,6 +4,15 @@ All notable changes to `dkdc-io-imessage` are documented here. Format loosely
 follows [Keep a Changelog](https://keepachangelog.com/) and the project uses
 [SemVer](https://semver.org/).
 
+## [0.1.3] - 2026-04-18
+
+### Added
+
+- README install section now leads with the
+  `curl -LsSf https://dkdc.sh/imessage-plugin/install.sh | sh`
+  one-liner for users who do not already have `cargo`. The script installs
+  `rustup` if absent, then runs `cargo install dkdc-io-imessage`.
+
 ## [0.1.2] - 2026-04-18
 
 ### Added

@@ -15,8 +15,16 @@ Gated by a local allowlist. Fail-closed by default.
 ## Install
 
 ```sh
+# no rust? one line:
+curl -LsSf https://dkdc.sh/imessage-plugin/install.sh | sh
+
+# already have cargo:
 cargo install dkdc-io-imessage
 ```
+
+The first script installs `rustup` if it's missing, then runs `cargo install
+dkdc-io-imessage`. Either way you end up with the `dkdc-io-imessage` binary
+on your `$PATH`.
 
 Then grant the terminal (or the CLI's host process) Full Disk Access on macOS
 so it can read `~/Library/Messages/chat.db`, and edit
