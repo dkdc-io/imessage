@@ -127,6 +127,7 @@ Then:
 1. grant Full Disk Access to the host process that will run the binary
 2. populate `~/.config/dkdc-io/imessage/access.toml`
 3. point your client at `dkdc-io-imessage --stdio`
+4. run `bin/setup` once in the repo to install the local git hook gate
 
 Full setup and config snippets for Codex and Claude Code live in the
 [crate README](crates/imessage-mcp/README.md).
@@ -148,6 +149,18 @@ The anti-regression coverage lives in `tests/injection.rs` and
 `crates/imessage-mcp/tests/claude_parity.md`.
 
 ## Develop
+
+Install the local hook gate first:
+
+```sh
+bin/setup
+```
+
+That configures `core.hooksPath` to use `.githooks/pre-commit`, which runs:
+
+- `cargo fmt --all -- --check`
+- `cargo clippy --workspace --all-targets -- -D warnings`
+- `cargo test --workspace`
 
 ```sh
 cargo fmt --all -- --check
