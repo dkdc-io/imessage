@@ -13,7 +13,7 @@ Code, or any stdio MCP client at one binary and it can:
 Local allowlist only. Empty config fails closed.
 
 [crates.io](https://crates.io/crates/dkdc-io-imessage) ·
-[docs](crates/imessage-mcp/README.md) ·
+[docs](https://github.com/dkdc-io/imessage/blob/main/crates/imessage-mcp/README.md) ·
 [install script](https://dkdc.sh/imessage-mcp/install.sh)
 
 ## A live round-trip
@@ -57,7 +57,7 @@ A text arrives. Codex runs `cal`. The calendar comes back as iMessage.
 • Sent this to your default chat.
 ```
 
-![Round-trip: prompt in, calendar out](docs/images/imessage-mcp-codex-cal-demo.jpeg)
+![Round-trip: prompt in, calendar out](https://raw.githubusercontent.com/dkdc-io/imessage/main/docs/images/imessage-mcp-codex-cal-demo.jpeg)
 
 This is the whole pitch: your agent can stay in the terminal while you stay on
 your phone.
@@ -87,7 +87,7 @@ defaul…
 ⏺ Sent the cal output (April 2026) to your default chat.
 ```
 
-![Claude round-trip: prompt in, calendar out](docs/images/imessage-mcp-claude-cal-demo.jpeg)
+![Claude round-trip: prompt in, calendar out](https://raw.githubusercontent.com/dkdc-io/imessage/main/docs/images/imessage-mcp-claude-cal-demo.jpeg)
 
 ## Why this exists
 
@@ -116,7 +116,7 @@ Then:
 3. register the MCP server with your LLM CLI
 
 Full setup and config snippets for Codex and Claude Code live in the
-[crate README](crates/imessage-mcp/README.md).
+[crate README](https://github.com/dkdc-io/imessage/blob/main/crates/imessage-mcp/README.md).
 
 ## Register the MCP server
 
